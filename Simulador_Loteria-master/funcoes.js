@@ -18,12 +18,13 @@ function getNum(valor, pos){
   valor = Number(valor)
    if(valor>60){
      alert("O valor é maior que 60")
-
+     limpar(pos)
    } else if(valor <=0){
      alert("O valor não pode ser menor que 0")
+     limpar(pos)
    }else if(numDigitados.includes(valor)) {
      alert("O valor já foi digitado!")
-
+         limpar(pos)
    }
 
    else{
@@ -31,6 +32,10 @@ function getNum(valor, pos){
    }
 
 }
+   function limpar(pos){
+     document.getElementById(`num${pos}`).value = ""
+
+   }
 function verificaAcertos(){
   let cont = 0
   numDigitados.forEach(function(valor,index){
