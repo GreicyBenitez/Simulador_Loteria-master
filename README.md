@@ -25,3 +25,15 @@ verifica a quantidade de acertos!!!
 | imagem 1     | imagem 2        |
 
 
+ ### codigo principal
+  ```js:
+  function verificaAcertos() {
+  let cont = 0
+  numDigitados.forEach(function (valor, index) {
+    if (numSort.includes(valor)) {
+      cont = cont + 1
+    }
+  })
+  document.getElementById("total").innerText = cont
+}
+  ```
